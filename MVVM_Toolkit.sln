@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVVM_Toolkit", "MVVM_Toolkit\MVVM_Toolkit.csproj", "{E924A061-6182-41FE-A27E-70FF80419551}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVM_Toolkit_Second", "MVVM_Toolkit_Second\MVVM_Toolkit_Second.csproj", "{829D48BA-30B9-4233-A991-0CCABDA9F7F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E924A061-6182-41FE-A27E-70FF80419551}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E924A061-6182-41FE-A27E-70FF80419551}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E924A061-6182-41FE-A27E-70FF80419551}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E924A061-6182-41FE-A27E-70FF80419551}.Release|Any CPU.Build.0 = Release|Any CPU
+		{829D48BA-30B9-4233-A991-0CCABDA9F7F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{829D48BA-30B9-4233-A991-0CCABDA9F7F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{829D48BA-30B9-4233-A991-0CCABDA9F7F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{829D48BA-30B9-4233-A991-0CCABDA9F7F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB9D2F2B-15EA-4DD5-AA5A-D785BD5E9CBD}
+	EndGlobalSection
+EndGlobal
