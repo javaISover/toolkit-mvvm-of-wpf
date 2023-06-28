@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MVVM_Toolkit.Views"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
         Title="main" Height="450" Width="800">
     <Window.Resources>
@@ -21,8 +22,7 @@
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="8*"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -38,7 +38,14 @@
             <TextBlock Name="fuhao" Text="+" FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
         <Grid Grid.Row="1" Grid.Column="2">
-            <TextBox Name="value2" Text="{Binding addModel.AddValue2,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" FontSize="80" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="value2" Text="{Binding addModel.AddValue2,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" FontSize="80" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                <!--<i:Interaction.Triggers>
+                    <i:EventTrigger EventName="KeyUp">
+                        <i:InvokeCommandAction Command="{Binding AddMethodCommand}" CommandParameter="Update"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>-->
+                <!--注释的地方为textbox添加KeyUp触发Command-->
+            </TextBox>
         </Grid>
         <Grid Grid.Row="1" Grid.Column="3">
             <TextBlock Name="fuhao2" Text="=" FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -48,7 +55,7 @@
             <!--<TextBox  Name="searchBox" Text="{Binding searchModel.AddValue3, UpdateSourceTrigger=PropertyChanged }" 
                              Height="25" Margin="5,5,0,5"    VerticalContentAlignment="Center" BorderBrush="LightGray" >
                 <TextBox.InputBindings>
-                    <KeyBinding  Key="Enter" Command="{Binding BtnCommandJisuan}" />
+                    <KeyBinding  Key="Enter" Command="{Binding AddMethodCommand}" />
                 </TextBox.InputBindings>
             </TextBox>-->
             <!--注释的地方为textbox添加回车触发Command-->
@@ -59,19 +66,59 @@
             
         </Grid>
         <Grid Grid.Row="2" Grid.Column="4">
-            <Button FontSize="30" Content="计算" Command="{Binding AddMethodCommand}" >
-                <Button.Style >
-                    <Style TargetType="Button">
-                        <Setter Property="Background" Value="White"/>
+            <Button FontSize="30" Width="150" Content="计算" Command="{Binding AddMethodCommand}" >
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding addModel.IsPush}" Value="true">
+                                <Setter Property="Background" Value="AliceBlue"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding addModel.IsPush}" Value="false">
+                                <Setter Property="Background" Value="Gray"/>
+                            </DataTrigger>
+                        </Style.Triggers>
                     </Style>
                 </Button.Style>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="3"/>
+                    </Style>
+                </Button.Resources>
             </Button>
         </Grid>
-        <Grid x:Name="inputbox" Grid.Row="3" Grid.ColumnSpan="5" >
-            <TextBox   FontSize="20" Width="{Binding Path=ActualWidth,ElementName=inputbox}" HorizontalAlignment="Center" VerticalAlignment="Center"  Text="{Binding addModel.InputText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+        <Grid Grid.Row="3" Grid.ColumnSpan="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid x:Name="inputbox" Grid.Row="0" Grid.Column="0" >
+                    <TextBox   FontSize="20" Width="{Binding Path=ActualWidth,ElementName=inputbox}" HorizontalAlignment="Center" VerticalAlignment="Center"  Text="{Binding addModel.InputText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                </Grid>
+                <Grid x:Name="outputbox"  Grid.Row="1" Grid.Column="0">
+                    <TextBox   FontSize="20" Width="{Binding Path=ActualWidth,ElementName=inputbox}" HorizontalAlignment="Center" VerticalAlignment="Center"  Text="{Binding addModel.InputText}" />
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="1">
+                <Button FontSize="30" Content="跳转页面" Command="{Binding OtherPageCommand}" >
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="3"/>
+                        </Style>
+                    </Button.Resources>
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Width" Value="150"/>
+                            <Setter Property="Height" Value="50"/>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Grid>
         </Grid>
-        <Grid x:Name="outputbox"  Grid.Row="4" Grid.ColumnSpan="5">
-            <TextBox   FontSize="20" Width="{Binding Path=ActualWidth,ElementName=inputbox}" HorizontalAlignment="Center" VerticalAlignment="Center"  Text="{Binding addModel.InputText}" />
-        </Grid>
+        
     </Grid>
 </Window>

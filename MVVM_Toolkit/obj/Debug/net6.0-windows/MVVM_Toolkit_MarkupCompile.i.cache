@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\HX\CWork\Work\MVVM_Toolkit\MVVM_Toolkit\App.xaml
-11791640120
+21475904940
 
-7-759628161
-195-1358598185
-Views\main.xaml;
+81403062496
+1961153893338
+Views\main.xaml;Views\OtherViews\Vframe.xaml;
 
-True
+False
 

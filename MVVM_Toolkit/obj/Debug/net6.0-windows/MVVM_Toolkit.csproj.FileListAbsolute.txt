@@ -21,3 +21,6 @@ C:\HX\CWork\Work\MVVM_Toolkit\MVVM_Toolkit\obj\Debug\net6.0-windows\refint\MVVM_
 C:\HX\CWork\Work\MVVM_Toolkit\MVVM_Toolkit\obj\Debug\net6.0-windows\MVVM_Toolkit.pdb
 C:\HX\CWork\Work\MVVM_Toolkit\MVVM_Toolkit\obj\Debug\net6.0-windows\MVVM_Toolkit.genruntimeconfig.cache
 C:\HX\CWork\Work\MVVM_Toolkit\MVVM_Toolkit\obj\Debug\net6.0-windows\ref\MVVM_Toolkit.dll
+C:\HX\CWork\Work\MVVM_Toolkit\MVVM_Toolkit\bin\Debug\net6.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\HX\CWork\Work\MVVM_Toolkit\MVVM_Toolkit\obj\Debug\net6.0-windows\Views\OtherViews\Vframe.g.cs
+C:\HX\CWork\Work\MVVM_Toolkit\MVVM_Toolkit\obj\Debug\net6.0-windows\Views\OtherViews\Vframe.baml

@@ -6,7 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
+using MVVM_Toolkit.Views.OtherViews;
 
 namespace MVVM_Toolkit.ViewModels
 {
@@ -28,17 +30,23 @@ namespace MVVM_Toolkit.ViewModels
 
             addModel.ResultText = "算出结果为：" + addModel.AddValue3;
 
-            if(addModel.isPush)
+            if (addModel.IsPush)
             {
-                addModel.isPush = false;
-               
+                addModel.IsPush = false;
             }
             else
             {
-                addModel.isPush = true;
+                addModel.IsPush = true;
             }
-            
         }
 
+        [RelayCommand]
+        private void OtherPage()
+        {
+            WindowState = WindowState.Minimized();
+            Vframe f = new Vframe();
+            f.Show();
+        }
+       
     }
 }

@@ -28,7 +28,8 @@ namespace MVVM_Toolkit.Models
         [ObservableProperty]
         private string? inputText;
 
-        
+        //输入文本
+        [ObservableProperty]
         public bool isPush = true;
 
     }

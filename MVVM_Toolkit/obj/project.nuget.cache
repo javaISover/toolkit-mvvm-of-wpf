@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "BRf6Lpm8tT4g4EQOVSiVe6sHDNLerN518LvuZUwsqq6ugBDqFRi1jwjOVNgRqx5PfxXWPQX6BzDfGkE/PjfVSg==",
+  "dgSpecHash": "5hxaqkxJ9FHspCaqgkB3ooVjNw/D3Px33jKteTPX+UdBkyUPFxWF906jakRlEVl1ygVxScFagtSIrL4a/0kHrQ==",
   "success": true,
   "projectFilePath": "C:\\HX\\CWork\\Work\\MVVM_Toolkit\\MVVM_Toolkit\\MVVM_Toolkit.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\admin\\.nuget\\packages\\communitytoolkit.mvvm\\8.1.0\\communitytoolkit.mvvm.8.1.0.nupkg.sha512"
+    "C:\\Users\\admin\\.nuget\\packages\\communitytoolkit.mvvm\\8.1.0\\communitytoolkit.mvvm.8.1.0.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
   ],
   "logs": []
 }

@@ -29,6 +29,9 @@ namespace MVVM_Toolkit.Views
             this.DataContext= viewModel;
         }
 
+        /// <summary>
+        /// 快捷键方法
+        /// </summary>
         private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
         => viewModel.AddMethodCommand.Execute(this);
     }

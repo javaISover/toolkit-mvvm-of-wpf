@@ -1,0 +1,32 @@
+﻿<Window x:Class="MVVM_Toolkit.Views.OtherViews.Vframe"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MVVM_Toolkit.Views.OtherViews"
+        mc:Ignorable="d"
+        Title="Vframe" Height="450" Width="800">
+    <Grid ShowGridLines="False">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="24"/>
+        </Grid.RowDefinitions>
+
+        <Menu>
+            <MenuItem Header="_File" Height="24">
+            </MenuItem>
+            <MenuItem Header="_Functions" Height="24">
+                <!--<MenuItem Header="_Width Info" Click="WidthInfo_Click"/>
+                <MenuItem Header="_Show Data Label" Click="ShowDataLabel_Click" />-->
+            </MenuItem>
+            <!--<CheckBox Content="_Advanced Options" Name="AdvCheckBox"
+                      IsChecked="True"
+                      Checked="AdvCheckBox_Checked"
+                      Unchecked="AdvCheckBox_Unchecked"/>-->
+        </Menu>
+        
+        <Border Grid.Row="2" Background="LightSteelBlue"/>
+
+    </Grid>
+</Window>

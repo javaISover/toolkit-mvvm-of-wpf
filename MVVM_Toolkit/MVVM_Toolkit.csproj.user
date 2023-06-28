@@ -10,9 +10,15 @@
     <Compile Update="Views\main.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\OtherViews\Vframe.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\main.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\OtherViews\Vframe.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
